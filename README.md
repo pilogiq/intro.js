@@ -1,3 +1,6 @@
+# In this fork
+Added TwitterBootstrap's look and feel to the tooltips. Simple but nice to have in a TWBS application.
+
 # Intro.js
 
 > Better introductions for websites and features with a step-by-step guide for your projects.
