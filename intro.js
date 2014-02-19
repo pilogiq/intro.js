@@ -578,7 +578,7 @@
 
       //skip button
       var skipTooltipButton = document.createElement('a');
-      skipTooltipButton.className = 'introjs-button introjs-skipbutton';
+      skipTooltipButton.className = 'btn btn-xs btn-default pull-left';
       skipTooltipButton.href = 'javascript:void(0);';
       skipTooltipButton.innerHTML = this._options.skipLabel;
 
@@ -609,16 +609,16 @@
     }
 
     if (this._currentStep == 0 && this._introItems.length > 1) {
-      prevTooltipButton.className = 'introjs-button introjs-prevbutton introjs-disabled';
-      nextTooltipButton.className = 'introjs-button introjs-nextbutton';
+      prevTooltipButton.className = 'btn btn-xs btn-default introjs-prev disabled';
+      nextTooltipButton.className = 'btn btn-xs btn-default introjs-next';
       skipTooltipButton.innerHTML = this._options.skipLabel;
     } else if (this._introItems.length - 1 == this._currentStep || this._introItems.length == 1) {
       skipTooltipButton.innerHTML = this._options.doneLabel;
-      prevTooltipButton.className = 'introjs-button introjs-prevbutton';
-      nextTooltipButton.className = 'introjs-button introjs-nextbutton introjs-disabled';
+      prevTooltipButton.className = 'btn btn-xs btn-default introjs-prev';
+      nextTooltipButton.className = 'btn btn-xs btn-default introjs-next disabled';
     } else {
-      prevTooltipButton.className = 'introjs-button introjs-prevbutton';
-      nextTooltipButton.className = 'introjs-button introjs-nextbutton';
+      prevTooltipButton.className = 'btn btn-xs btn-default introjs-prev';
+      nextTooltipButton.className = 'btn btn-xs btn-default introjs-next';
       skipTooltipButton.innerHTML = this._options.skipLabel;
     }
 

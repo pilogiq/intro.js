@@ -67,8 +67,8 @@
   background:     -ms-linear-gradient(top, #ff3019 0%, #cf0404 100%); /* IE10+ */
   background:      -o-linear-gradient(top, #ff3019 0%, #cf0404 100%); /* Opera 11.10+ */
   background:         linear-gradient(to bottom, #ff3019 0%, #cf0404 100%);  /* W3C */
-  width: 20px;
-  height:20px;
+  width: 32px;
+  height:32px;
   line-height: 20px;
   border: 3px solid white;
   border-radius: 50%;
@@ -182,38 +182,12 @@
   background-image: linear-gradient(#ececec, #f4f4f4);
 }
 
-/* overrides extra padding on button elements in Firefox */
-.introjs-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
+.introjs-prev {
+    border-radius: 4px 0 0 4px;
 }
 
-.introjs-skipbutton {
-  margin-right: 5px;
-  color: #7a7a7a;
-}
-
-.introjs-prevbutton {
-  -webkit-border-radius: 0.2em 0 0 0.2em;
-  -moz-border-radius: 0.2em 0 0 0.2em;
-  border-radius: 0.2em 0 0 0.2em;
-  border-right: none;
-}
-
-.introjs-nextbutton {
-  -webkit-border-radius: 0 0.2em 0.2em 0;
-  -moz-border-radius: 0 0.2em 0.2em 0;
-  border-radius: 0 0.2em 0.2em 0;
-}
-
-.introjs-disabled, .introjs-disabled:hover, .introjs-disabled:focus {
-  color: #9a9a9a;
-  border-color: #d4d4d4;
-  box-shadow: none;
-  cursor: default;
-  background-color: #f4f4f4;
-  background-image: none;
-  text-decoration: none;
+.introjs-next {
+    border-radius: 0 4px 4px 0;
 }
 
 .introjs-bullets {
