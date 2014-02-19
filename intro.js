@@ -31,13 +31,13 @@
 
     this._options = {
       /* Next button label in tooltip box */
-      nextLabel: '<span class="glyphicon glyphicon-search"></span>',
+      nextLabel: '<span class="glyphicon glyphicon-arrow-right"></span>',
       /* Previous button label in tooltip box */
-      prevLabel: '&larr; Back',
+      prevLabel: '<span class="glyphicon glyphicon-arrow-left"></span>',
       /* Skip button label in tooltip box */
-      skipLabel: 'Skip',
+      skipLabel: '<span class="glyphicon glyphicon-remove-circle"></span>',
       /* Done button label in tooltip box */
-      doneLabel: 'Done',
+      doneLabel: '<span class="glyphicon glyphicon-ok-circle"></span>',
       /* Default tooltip box position */
       tooltipPosition: 'bottom',
       /* Next CSS class for tooltip boxes */
