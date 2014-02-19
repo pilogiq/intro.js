@@ -578,7 +578,7 @@
 
       //skip button
       var skipTooltipButton = document.createElement('a');
-      skipTooltipButton.className = 'btn btn-default pull-left introjs-skipbutton';
+      skipTooltipButton.className = 'btn btn-success pull-left introjs-skipbutton';
       skipTooltipButton.href = 'javascript:void(0);';
       skipTooltipButton.innerHTML = this._options.skipLabel;
 
@@ -608,19 +608,22 @@
       _placeTooltip.call(self, targetElement.element, tooltipLayer, arrowLayer);
     }
 
-    if (this._currentStep == 0 && this._introItems.length > 1) {
-      prevTooltipButton.className = 'btn btn-default introjs-prevbutton disabled';
-      nextTooltipButton.className = 'btn btn-default introjs-nextbutton';
-      skipTooltipButton.innerHTML = this._options.skipLabel;
-    } else if (this._introItems.length - 1 == this._currentStep || this._introItems.length == 1) {
-      skipTooltipButton.innerHTML = this._options.doneLabel;
-      prevTooltipButton.className = 'btn btn-default introjs-prevbutton';
-      nextTooltipButton.className = 'btn btn-default introjs-nextbutton disabled';
-    } else {
-      prevTooltipButton.className = 'btn btn-default introjs-prevbutton';
-      nextTooltipButton.className = 'btn btn-default introjs-nextbutton';
-      skipTooltipButton.innerHTML = this._options.skipLabel;
-    }
+      if (this._currentStep == 0 && this._introItems.length > 1) {
+          skipTooltipButton.innerHTML = this._options.skipLabel;
+          skipTooltipButton.className = 'btn btn-default pull-left introjs-skipbutton';
+          prevTooltipButton.className = 'btn btn-default introjs-prevbutton disabled';
+          nextTooltipButton.className = 'btn btn-default introjs-nextbutton';
+      } else if (this._introItems.length - 1 == this._currentStep || this._introItems.length == 1) {
+          skipTooltipButton.innerHTML = this._options.doneLabel;
+          skipTooltipButton.className = 'btn btn-success pull-left introjs-skipbutton';
+          prevTooltipButton.className = 'btn btn-default introjs-prevbutton';
+          nextTooltipButton.className = 'btn btn-default introjs-nextbutton disabled';
+      } else {
+          skipTooltipButton.innerHTML = this._options.skipLabel;
+          skipTooltipButton.className = 'btn btn-default pull-left introjs-skipbutton';
+          prevTooltipButton.className = 'btn btn-default introjs-prevbutton';
+          nextTooltipButton.className = 'btn btn-default introjs-nextbutton';
+      }
 
     //Set focus on "next" button, so that hitting Enter always moves you onto the next step
     nextTooltipButton.focus();
