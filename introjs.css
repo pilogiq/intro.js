@@ -72,7 +72,7 @@
   line-height: 20px;
   border: 3px solid white;
   border-radius: 50%;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3019', endColorstr='#cf0404', GradientType=0); /* IE6-9 */ 
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3019', endColorstr='#cf0404', GradientType=0); /* IE6-9 */
   filter: progid:DXImageTransform.Microsoft.Shadow(direction=135, strength=2, color=ff0000); /* IE10 text shadows */
   box-shadow: 0 2px 5px rgba(0,0,0,.4);
 }
@@ -127,15 +127,18 @@
        -o-transition: opacity 0.1s ease-out;
           transition: opacity 0.1s ease-out;
 }
+/*
 
 .introjs-tooltipbuttons {
   text-align: right;
 }
 
-/* 
+*/
+/*
  Buttons style by http://nicolasgallagher.com/lab/css3-github-buttons/ 
  Changed by Afshin Mehrabani
-*/
+*//*
+
 .introjs-button {
   position: relative;
   overflow: visible;
@@ -158,11 +161,17 @@
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   -o-background-clip: padding-box;
-  /*background-clip: padding-box;*/ /* commented out due to Opera 11.10 bug */
+  */
+/*background-clip: padding-box;*//*
+ */
+/* commented out due to Opera 11.10 bug *//*
+
   -webkit-border-radius: 0.2em;
   -moz-border-radius: 0.2em;
   border-radius: 0.2em;
-  /* IE hacks */
+  */
+/* IE hacks *//*
+
   zoom: 1;
   *display: inline;
   margin-top: 10px;
@@ -181,13 +190,16 @@
   background-image: -o-linear-gradient(#ececec, #f4f4f4);
   background-image: linear-gradient(#ececec, #f4f4f4);
 }
+*/
 
-.introjs-prev {
+.introjs-prevbutton {
     border-radius: 4px 0 0 4px;
+    float: right;
 }
 
-.introjs-next {
+.introjs-nextbutton {
     border-radius: 0 4px 4px 0;
+    float: right;
 }
 
 .introjs-bullets {
@@ -195,7 +207,7 @@
 }
 .introjs-bullets ul {
   clear: both;
-  margin: 15px auto 0;
+  margin: 15px auto 10px;
   padding: 0;
   display: inline-block;
 }
@@ -206,8 +218,9 @@
 }
 .introjs-bullets ul li a {
   display: block;
-  width: 6px;
-  height: 6px;
+  position: relative;
+  width: 10px;
+  height: 10px;
   background: #ccc;
   border-radius: 10px;
   -moz-border-radius: 10px;
@@ -219,4 +232,7 @@
 }
 .introjs-bullets ul li a.active {
   background: #999;
+  width: 12px;
+  height: 12px;
+  top: -1px;
 }

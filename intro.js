@@ -578,7 +578,7 @@
 
       //skip button
       var skipTooltipButton = document.createElement('a');
-      skipTooltipButton.className = 'btn btn-xs btn-default pull-left';
+      skipTooltipButton.className = 'btn btn-default pull-left introjs-skipbutton';
       skipTooltipButton.href = 'javascript:void(0);';
       skipTooltipButton.innerHTML = this._options.skipLabel;
 
@@ -598,8 +598,8 @@
 
       //in order to prevent displaying next/previous button always
       if (this._introItems.length > 1) {
-        buttonsLayer.appendChild(prevTooltipButton);
-        buttonsLayer.appendChild(nextTooltipButton);
+          buttonsLayer.appendChild(nextTooltipButton);
+          buttonsLayer.appendChild(prevTooltipButton);
       }
 
       tooltipLayer.appendChild(buttonsLayer);
@@ -609,16 +609,16 @@
     }
 
     if (this._currentStep == 0 && this._introItems.length > 1) {
-      prevTooltipButton.className = 'btn btn-xs btn-default introjs-prev disabled';
-      nextTooltipButton.className = 'btn btn-xs btn-default introjs-next';
+      prevTooltipButton.className = 'btn btn-default introjs-prevbutton disabled';
+      nextTooltipButton.className = 'btn btn-default introjs-nextbutton';
       skipTooltipButton.innerHTML = this._options.skipLabel;
     } else if (this._introItems.length - 1 == this._currentStep || this._introItems.length == 1) {
       skipTooltipButton.innerHTML = this._options.doneLabel;
-      prevTooltipButton.className = 'btn btn-xs btn-default introjs-prev';
-      nextTooltipButton.className = 'btn btn-xs btn-default introjs-next disabled';
+      prevTooltipButton.className = 'btn btn-default introjs-prevbutton';
+      nextTooltipButton.className = 'btn btn-default introjs-nextbutton disabled';
     } else {
-      prevTooltipButton.className = 'btn btn-xs btn-default introjs-prev';
-      nextTooltipButton.className = 'btn btn-xs btn-default introjs-next';
+      prevTooltipButton.className = 'btn btn-default introjs-prevbutton';
+      nextTooltipButton.className = 'btn btn-default introjs-nextbutton';
       skipTooltipButton.innerHTML = this._options.skipLabel;
     }
 
